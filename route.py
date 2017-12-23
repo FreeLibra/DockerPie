@@ -1,7 +1,7 @@
 """
-Debug版本,还在构思中.
+Debug版本,还在构思中
 """
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding:utf-8 -*-
 
 import tornado.autoreload
