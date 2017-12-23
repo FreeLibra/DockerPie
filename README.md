@@ -10,4 +10,3 @@ Maybe,In the Future, I will use golang with python as well.
 
 Thank you for watching my project!
 
-Good Luck!
