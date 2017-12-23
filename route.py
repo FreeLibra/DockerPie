@@ -9,8 +9,9 @@ LOG_DIR = './docker_cmd/log/temp.txt'
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        images_list = list_docker_images(log_dir=LOG_DIR)
-        self.write(str(images_list[1]))
+        # images_list = list_docker_images(log_dir=LOG_DIR)
+        self.write('\n输出本地Docker镜像列表:\n\n')
+        # self.write(str(images_list[1]))
 
 
 def make_app():
