@@ -1,10 +1,16 @@
+# -*- coding:utf-8 -*-
+
 import tornado.ioloop
 import tornado.web
+from docker_cmd.sys_cmd import *
+
+LOG_DIR = './docker_cmd/log/temp.txt'
 
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, world")
+        images_list = list_docker_images(log_dir=LOG_DIR)
+        self.write(str(images_list[1]))
 
 
 def make_app():
