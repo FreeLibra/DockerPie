@@ -13,12 +13,6 @@ from settings import settings
 LOG_DIR = './docker_cmd/log/temp.txt'
 
 
-# def handle_request(client):
-#     buf = client.recv(1024)
-#     client.send("HTTP/1.1 200 OK\r\n\r\n")
-#     client.send("Hello, Seven")
-
-
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         images_list = list_docker_images(log_dir=LOG_DIR)
