@@ -13,10 +13,12 @@ from settings import settings
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        status, line_list = cmd.list_docker_images()
-        line_list = [str(ele) for ele in line_list]
-        print(line_list)
-        self.render('base.html', title='Welcome to use DockerPie', items=line_list)
+        status, docker_images_title_list, docker_images_item_list = cmd.list_docker_images()
+        self.render('base.html',
+                    title='Welcome to use DockerPie',
+                    docker_images_title_list=docker_images_title_list,
+                    docker_image_item_list=docker_images_item_list,
+                    items='')
 
 
 def make_app():

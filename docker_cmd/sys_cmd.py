@@ -26,10 +26,6 @@ def result_handler(raw_output):
     title_list = re.sub("\s{2,}", "\t", line_list[0]).split("\t")
     for line in line_list[1:]:
         item_list.append(re.sub("\s{2,}", "\t", line).split("\t"))
-    print(title_list)
-    print('---------------------')
-    for ele in item_list:
-        print(ele)
     return raw_output[0], title_list, item_list
 
 

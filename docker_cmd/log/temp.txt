@@ -1,5 +1,5 @@
 REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
-portainer/portainer          latest              f71b185552bf        12 days ago         33.2MB
+portainer/portainer          latest              f71b185552bf        13 days ago         33.2MB
 nginx                        1.12.2              db5c5ed76327        7 weeks ago         108MB
 tensorflow/tensorflow        1.4.0-py3           7d680bfcec87        7 weeks ago         1.25GB
 continuumio/anaconda3        5.0.1               0014184d8fa8        7 weeks ago         3.05GB
