@@ -8,9 +8,9 @@ import tornado.autoreload
 import tornado.ioloop
 import tornado.web
 from docker_cmd.sys_cmd import list_docker_images
+from settings import settings
 
 LOG_DIR = './docker_cmd/log/temp.txt'
-settings = {'debug': True}
 
 
 # def handle_request(client):
@@ -22,17 +22,15 @@ settings = {'debug': True}
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         images_list = list_docker_images(log_dir=LOG_DIR)
-        self.write('\n输出本地Docker镜像列表:\n\n')
-        self.write(str(images_list[1]))
+        # self.write('\n输出本地Docker镜像列表:\n\n')
+        # self.write(str(images_list[1]))
+        self.render('base.html', title='Welcome to use DockerPie', items='Hello')
 
 
 def make_app():
-    # return tornado.web.Application([
-    #     (r"/", MainHandler),
-    # ], **settings)
     return tornado.web.Application([
         (r"/", MainHandler),
-    ])
+    ], **settings)
 
 
 if __name__ == "__main__":
