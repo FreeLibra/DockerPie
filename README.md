@@ -1,12 +1,12 @@
 # DockerPie
 
-Project start at Dec 23,2017 
+Project start at Dec 23 , 2017 
 
 Hello,This is my first project on the Github!
 
 This project general purpos is to control the Docker Images , Containers ,and Docker Machines etc ,wheather loacal or remote ,with simple GUI powered by Python  Tornado and BootStrap.
 
-Maybe,In the Future, I will use golang with python as well.
+Maybe,In the Future, I will use golang to work with python as well.
 
 Thank you for watching my project!
 
