@@ -7,18 +7,16 @@ Debug版本,还在构思中
 import tornado.autoreload
 import tornado.ioloop
 import tornado.web
-from docker_cmd.sys_cmd import list_docker_images
+import docker_cmd.sys_cmd as cmd
 from settings import settings
-
-LOG_DIR = './docker_cmd/log/temp.txt'
 
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        images_list = list_docker_images(log_dir=LOG_DIR)
-        # self.write('\n输出本地Docker镜像列表:\n\n')
-        # self.write(str(images_list[1]))
-        self.render('base.html', title='Welcome to use DockerPie', items='Hello')
+        status, line_list = cmd.list_docker_images()
+        line_list = [str(ele) for ele in line_list]
+        print(line_list)
+        self.render('base.html', title='Welcome to use DockerPie', items=line_list)
 
 
 def make_app():
