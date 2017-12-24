@@ -1,6 +1,6 @@
 # DockerPie
 
-This Project started at Dec 23 , 2017 .
+This Project started at Dec 23 , 2017
 
 Hello,This is my first project on the Github!
 
