@@ -7,7 +7,6 @@ Debug版本,还在构思中
 import tornado.autoreload
 import tornado.ioloop
 import tornado.web
-from docker_cmd.sys_cmd import *
 
 LOG_DIR = './docker_cmd/log/temp.txt'
 settings = {'debug': True}
