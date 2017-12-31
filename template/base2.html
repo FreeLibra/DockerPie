@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="row">
+    <div class="col-lg-3">
+        <p>
+            Hello
+        </p>
+    </div>
+    <div class="col-lg-9">
+            <table class="table striped hover info">
+    <thead>
+    {% for docker_images_title in docker_images_title_list %}
+    <th>docker_images_title</th>
+    {% end %}
+    </thead>
+    <tbody>
+    {% for docker_image_item in docker_image_item_list %}
+    <tr>
+        {% for image_item in docker_image_item %}
+        <td>
+            {{ image_item }}
+        </td>
+        {% end %}
+    </tr>
+    {% end %}
+    </tbody>
+</table>
+    </div>
+</div>
+
+<!--<style>-->
+    <!--.cus-sidebar {-->
+        <!--width: 25%;-->
+    <!--}-->
+
+    <!--.cus-main {-->
+        <!--width: 75%;-->
+    <!--}-->
+<!--</style>-->
+<!--<div class="row">-->
+    <!--<div class="pull-left cus-sidebar">-->
+        <!--<p>-->
+            <!--Hello-->
+        <!--</p>-->
+    <!--</div>-->
+    <!--<div class="pull-right cus-main">-->
+        <!--<div class="bs-component">-->
+            <!--<table class="table table-striped table-hover" ,striped="true">-->
+                <!--<thead>-->
+                <!--{% for docker_images_title in docker_images_title_list %}-->
+                <!--<th class="success">docker_images_title</th>-->
+                <!--{% end %}-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--{% for docker_image_item in docker_image_item_list %}-->
+                <!--<tr class="info">-->
+                    <!--{% for image_item in docker_image_item %}-->
+                    <!--<td>-->
+                        <!--{{ image_item }}-->
+                    <!--</td>-->
+                    <!--{% end %}-->
+                <!--</tr>-->
+                <!--{% end %}-->
+                <!--</tbody>-->
+            <!--</table>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+</body>
+</html>
