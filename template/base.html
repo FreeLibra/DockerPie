@@ -22,14 +22,14 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
-            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor02">
+    <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -58,14 +58,29 @@
 
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-                Start</button><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
-                Stop</button><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-                Kill</button><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-                Restart</button><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                Remove</button>
+            <button type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                Start
+            </button>
+            <button type="button" class="btn btn-warning">
+                <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                Stop
+            </button>
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                Kill
+            </button>
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                Restart
+            </button>
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                Remove
+            </button>
             <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <button type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     Add Container
                 </button>
             </div>
@@ -76,7 +91,7 @@
                 <thead>
                 <tr class="info">
                     {% for docker_images_title in docker_images_title_list %}
-                    <th class="info">
+                    <th>
                         docker_images_title
                     </th>
                     {% end %}
